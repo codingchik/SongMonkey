@@ -9,7 +9,12 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+		if 
 		@is_signup = true
+		redirect_to show_user_path
+		else
+		redirect_to new_user_path
+		end	
 	end
 
 	def create

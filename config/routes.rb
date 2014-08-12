@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    resource :session, only: [:new, :create, :destroy]
    #  resources :songs
    # resources :users
     get 'songs' => 'songs#index', as: :songs
@@ -12,12 +13,14 @@ Rails.application.routes.draw do
 
     get 'users' => 'users#index', as: :user
     post 'users' => 'users#create'
-    get 'users/new' => 'users#new'
+    get 'users/new' => 'users#new', as: :newuser
     get 'users/:id/:edit' => 'users#edit'
     get 'users/:id' => 'users#show', as: :showuser
     patch 'users/:id' => 'users#update'
     put 'users/:id' => 'users#update'
     delete 'users/:id' => 'users#destroy'
+
+    get 'sessions/new' => 'session#new', as: :new_session
 
 
   # The priority is based upon order of creation: first created -> highest priority.
