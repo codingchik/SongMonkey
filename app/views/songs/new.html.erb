@@ -1,0 +1,12 @@
+
+<h1> New Song </h1>
+
+<%= form_for @song, {url: new_song_path} do |s| %>
+<p><%= s.text_field :name, placeholder:"title" %></p>
+<p><%= s.text_field :location, placeholder: "location" %></p>
+<p><%= s.date_field :date, placeholder: "date" %></p>
+<p><%= s.text_area :text, placeholder: "what's your song today?" %></p>
+<% end %>
+
+
+

@@ -1,0 +1,22 @@
+readme.txt
+
+<table>
+	<tr>
+		<th> Title </th>
+		<th> Date </th>
+	</tr>
+	<%= @songs.each do |s| %>
+	<tr>
+		<td><%= s.name %></td>
+		<td><%= s.date %></td>
+		<td><%= s.text %></td>
+		<td><%= s.location %></td>
+	</tr>
+</table>
+
+<% end %>
+
+<%= link_to "new song", new_song_path %>
+<%= link_to "show", song_path %>
+<%= link_to "edit", edit_song_path %>
+<%= link_to "remove", song, method: :delete, { confirm: "Are you sure?"} %>
