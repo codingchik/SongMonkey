@@ -1,10 +1,18 @@
 
 <h1> sign up here </h1>
+
 <%= form_for @user, {url: session_path} do |f| %>
+
 <%= f.text_field :name, placeholder:"Name" %>
 <%= f.text_field :email, placeholder:"Email" %>
 <%= f.text_field :location, placeholder:"Where do you live" %>
 <%= f.password_field :password, placeholder:"Enter Password" %>
 <%= f.password_field :password_confirmation, placeholder:"Confirm Password" %>
+
 <%= f.submit "Sign up!" %>
+<p>
+	OR
+<%= link_to "Login", new_session_path if !@is_login%>
+</p>
+
 <% end %>

@@ -1,3 +1,28 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+
+$mainfont: 'Niconne', cursive;
+
+ body {
+ 	background: url('greywall.png');
+ 	background-position: center;
+ 	margin: auto;
+ }
+
+ .container {
+ 	position: center;
+ }
+
+ head {
+ 	float: left;
+ 	
+ }
+
+h1 {
+	text-align: center;
+	font-family: $mainfont;
+	font-size: 55px;
+}

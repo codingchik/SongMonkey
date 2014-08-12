@@ -1,2 +1,8 @@
 index.html.erb
-<h1> users </h1>
+<h1> user index </h1>
+<% if current_user %>
+		Welcome to the home page <%= current_user.name %>
+
+<% else %>
+		<%= link_to "Login", new_session_path if !@is_login%>
+<% end %>

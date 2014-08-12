@@ -12,15 +12,15 @@ Rails.application.routes.draw do
     delete 'songs/:id' => 'songs#destroy'
 
     get 'users' => 'users#index', as: :user
-    post 'users' => 'users#create'
     get 'users/new' => 'users#new', as: :newuser
+    get 'users/:id' => 'users#show', as: :show_user
+    post 'users' => 'users#create'
     get 'users/:id/:edit' => 'users#edit'
-    get 'users/:id' => 'users#show', as: :showuser
     patch 'users/:id' => 'users#update'
     put 'users/:id' => 'users#update'
     delete 'users/:id' => 'users#destroy'
 
-    get 'sessions/new' => 'session#new', as: :new_session
+    # get 'sessions/new' => 'session#new', as: :new_session
 
 
   # The priority is based upon order of creation: first created -> highest priority.
