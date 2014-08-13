@@ -1,7 +1,10 @@
-index.html.erb
+
 <h1> user index </h1>
 <% if current_user %>
 		Welcome to the home page <%= current_user.name %>
+		Whats your song today? <%= link_to "New Song", new_song_path %>
+		What are others singing? <%= link_to "All Songs", songs_path %>
+		<%= link_to "Logout", home_path %>
 
 <% else %>
 		<%= link_to "Login", new_session_path if !@is_login%>

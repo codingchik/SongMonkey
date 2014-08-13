@@ -6,6 +6,7 @@ class User
   field :email, type: String
   field :location, type: String
   field :password_digest, type:String
+  field :password_confirmation, type:String
 
   validates :name, presence: true
   validates :email, presence: true
