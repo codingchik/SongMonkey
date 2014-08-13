@@ -7,6 +7,10 @@ class User
   field :location, type: String
   field :password_digest, type:String
 
+  validates :name, presence: true
+  validates :email, presence: true
+  validates_uniqueness_of :email
+
   has_many :songs
   # following only works with Active Record, not used in this app
   # has_many :likes, :through :songs

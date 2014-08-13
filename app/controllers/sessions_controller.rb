@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
 		u = User.where(email: params[:user][:email]).first
 		if u && u.authenticate(params[:user][:password])
 			session[:user_id] = u.id.to_s
-			redirect_to user_path
+			redirect_to songs_path
 		else
-			redirect_to new_session_path
+			redirect_to newuser_path
 		end
 	end
 

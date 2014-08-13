@@ -1,6 +1,7 @@
 class SongsController <ApplicationController
 
 	def index
+		@songs = Song.all
 	end
 
 	def show
@@ -12,12 +13,12 @@ class SongsController <ApplicationController
 	end
 
 	def create
-		# @song = Song.new(params.require(:song).permit(:name, :date, :text, location))
-		# if @song.save
-		# 	redirect_to users_path
-		# else
-		# 	render 'new'
-		# end
+		 @song = Song.new(params.require(:song).permit(:name, :date, :text, location))
+		 if @song.save
+		 	redirect_to songs_path
+		 else
+		 	redirect_to create_song_path
+		 end
 	end
 
 	def edit

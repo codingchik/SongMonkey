@@ -1,20 +1,21 @@
-<!-- <!DOCTYPE html> -->
+ <!DOCTYPE html>
 <html>
 <head>
-  <title>Railsapp3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>MusicApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <%= image_tag "musicnote.png", size: "50" %>
-
 </head>
-
-<div class="container">
+ <ul>
+  	<li><%= image_tag "musicnote.png", size: "50" %></li>
+	<li><%= link_to "Signup", newuser_path %></li> 
+	<li><%= link_to "Login", new_session_path if !@is_login%></li>
+</ul>
 <body>
 
 <%= yield %>
 
 
 </body>
-</div>
+
 </html>

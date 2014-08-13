@@ -1,6 +1,14 @@
 
 <h1> Listing all Songs </h1>
 
-
+<ul>
+	<%= @songs.each do |s| %>
+	<li> <%=s.name %></li>
+	<li> <%=s.date %></li>
+	<li> <%=s.location %></li>
+	<li> <%=s.text %></li>
+<br/>
+<% end %>
+</ul>
 
 <%= link_to "new song", new_song_path %>
