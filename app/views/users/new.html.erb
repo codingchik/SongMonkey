@@ -1,11 +1,27 @@
-<h1> Sign up here </h1>
-<ul>
-	<%= form_for @user, {url: user_path} do |f| %>
-	<li><%= f.text_field :name, placeholder:"Name" %></li>
-	<li><%= f.text_field :email, placeholder:"Email" %></li>
-	<li><%= f.text_field :location, placeholder:"Where do you live?" %></li>
-	<li><%= f.password_field :password_digest, placeholder:"Enter Password" %></li>
-	<li><%= f.password_field :password_confirmation, placeholder: "Confirm Password" %></li>
-	<li><%= f.submit "Sign up!" %></li>
-	<% end %>
-</ul>
+
+<h1>Sign-Up</h1>
+<%= form_for @user, html: { class: 'form' } do |f| %>
+
+<div class="form-group">
+	<%= f.text_field :name, placeholder: "Name", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.text_field :email, placeholder: "email", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.password_field :password, placeholder: "password", class: 'form-control' %>
+</div>
+
+
+<div class="form-group">
+	<%= f.password_field :password_confirmation, placeholder: "password one more time", class: 'form-control' %>
+</div>
+
+
+<div class="form-group">
+	<%= f.submit "Submit", class: 'btn btn-primary btn-large' %>
+</div>
+
+<% end %>

@@ -6,7 +6,7 @@ class User
   field :email, type: String
   field :location, type: String
   field :password_digest, type:String
-  field :password_confirmation, type:String
+  has_secure_password
 
   validates :name, presence: true
   validates :email, presence: true
@@ -14,5 +14,6 @@ class User
 
   has_many :songs
 
-  has_secure_password
+  
 end
+

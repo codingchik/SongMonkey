@@ -2,10 +2,11 @@ class SongsController <ApplicationController
 
 	def index
 		@songs = Song.all
-	end
+	end		
 
 	def show
-		# song = Song.find(params[:id])
+		@song = Song.find(params[:id])
+		@songs = current_user.song
 	end
 
 	def new
@@ -13,7 +14,8 @@ class SongsController <ApplicationController
 	end
 
 	def create
-		 @song = Song.new(params.require(:song).permit(:name, :date, :text, location))
+		@song = current_user.songs.new(params.require(:song).permit(:name, :date, :text, :location))
+		 # @song = Song.new(params.require(:song).permit(:name, :date, :text, :location))
 		 if @song.save
 		 	redirect_to songs_path
 		 else

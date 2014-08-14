@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		u = User.where(email: params[:user][:email]).first
 		if u && u.authenticate(params[:user][:password])
 			session[:user_id] = u.id.to_s
-			redirect_to songs_path
+			redirect_to users_path
 		else
 			redirect_to new_session_path
 		end
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
 	def destroy
 		reset_session
-		redirect_to new_session_path
+		redirect_to home_path
 	end
 end
