@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 			session[:user_id] = u.id.to_s
 			redirect_to songs_path
 		else
-			redirect_to newuser_path
+			redirect_to new_session_path
 		end
 	end
 

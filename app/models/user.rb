@@ -13,8 +13,6 @@ class User
   validates_uniqueness_of :email
 
   has_many :songs
-  # following only works with Active Record, not used in this app
-  # has_many :likes, :through :songs
 
   has_secure_password
 end

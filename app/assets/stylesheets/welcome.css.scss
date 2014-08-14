@@ -1,0 +1,41 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+
+$headerfont: 'Niconne', cursive;
+$maincolor: #E8D1C8;
+
+
+html {
+	background: url(grey_wash_wall.png); 
+}
+
+body {
+	padding: 100px;
+	margin: auto;
+}
+
+.jumbotron {
+	padding-top: 250px;
+	padding-bottom: 200px;
+	background: url(mic.jpg) no-repeat center center;
+	margin: 50px;
+	background-size: cover;
+}
+
+li {
+	color: $maincolor;
+	display: block;
+	position: center;
+}
+
+
+h1 {
+	text-align: center;
+	font-family: $headerfont;
+	font-size: 55px;
+	text-color: $maincolor;
+}
+
