@@ -3,7 +3,8 @@ Rails.application.routes.draw do
     resources :users
   
     get '/new' => 'users#new', as: :newuser
-
+    get 'songs/:id' => 'song#show'
+    # delete  '/songs/:id'=>  'song#destroy'
     resource :session, only: [:new, :create, :destroy]
 
 

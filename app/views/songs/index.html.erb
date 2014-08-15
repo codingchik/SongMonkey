@@ -1,5 +1,48 @@
 
-<h1> Listing all Songs </h1>
+<ul>
+<h2> Songs in Los Angeles </h2>
+<% @songs.where(:location => "Los Angeles").each do |s| %>
+
+	<li><%= s.name %></li><br/>
+	<li><%= s.date %></li><br/>
+	<li><%= s.text %></li><br/>
+<%= link_to 'Delete', song_path(s.id), method: :delete %>	
+<br/>
+	<% end %>
+</ul>
+<%= link_to "new song", new_song_path %>
+
+<br/>
+
+<ul>
+<h2> Songs in Santa Monica </h2>
+<% @songs.where(:location => "Santa Monica").each do |s| %>
+
+	<li><%= s.name %></li><br/>
+	<li><%= s.date %></li><br/>
+	<li><%= s.text %></li><br/>
+	<%= link_to 'Delete', song_path(s.id), method: :delete %>	
+<br/>
+	<li><% end %>
+</ul>
+<br/>
+<ul>
+<h2> Songs in Pasadena </h2>
+<% @songs.where(:location => "Pasadena").each do |s| %>
+
+	<li><%= s.name %></li><br/>
+	<li><%= s.date %></li><br/>
+	<li><%= s.text %></li><br/>
+	<%= link_to 'Delete', song_path(s.id), method: :delete %>	
+<br/>
+	<% end %>
+</ul>	
+<br/>
+<%= link_to "new song", new_song_path %>
+
+
+
+<h1> All Songs </h1>
 
 <ul>
 	<% @songs.each do |s| %>
@@ -8,7 +51,9 @@
 	<li> <%=s.location %></li>
 	<li> <%=s.text %></li>
 <br/>
+<%= link_to 'Delete', song_path(s.id), method: :delete %>
 <% end %>
 </ul>
 
 <%= link_to "new song", new_song_path %>
+

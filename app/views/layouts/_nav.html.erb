@@ -13,6 +13,8 @@
     <ul>
 <% if current_user %>
             <li>Welcome, <%= current_user.name %></li>
+            <li> <%= link_to "Home", users_path %></li>
+            <li> <%= link_to "new song", new_song_path %></li>
             <li><%= link_to 'logout', session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_path %></li>

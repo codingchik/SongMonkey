@@ -1,11 +1,23 @@
+
 <% if current_user %>
-		Welcome  <%= current_user.name %> <br/>
-		Whats your song today? <%= link_to "New Song", new_song_path %>
-		What are others singing? <%= link_to "All Songs", songs_path %>
-		<%= link_to "Logout", session_path, method: :delete%>
+		 
+		<p>Whats your song today <%= current_user.name %> ?</p>
+		<p><%= link_to "New Song", new_song_path %></p><br/>
+		<p>What are others singing today?<p/>
+		<p><%= link_to "All Songs", songs_path %></p>
 
 <% else %>
 		 <%= link_to "Login", new_session_path if !@is_login%>
 <% end %>
 
+<p> your songs <p/>
+<ul>
 
+<li><% current_user.songs.all.each do |s| %></li>
+<li><%= s.name %></li>
+<li><%= s.location %></li>
+<li><%= s.text %></li>
+
+<% end %>
+
+</ul>

@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 		@user = User.new(params.require(:user).permit(:name, :email, :location, :password, :password_confirmation))
 		if @user.save
 			session[:user_id] = @user.id.to_s
-			redirect_to user_path(@user), notice: "Thank you for signing up"
+			redirect_to users_path(@user), notice: "Thank you for signing up"
 		else
 			render "new"
 		end
