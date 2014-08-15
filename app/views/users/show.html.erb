@@ -1,14 +1,5 @@
+show
 
-<% if current_user %>
-		 
-		<p>show Whats your song today <%= current_user.name %> ?</p><br/>
-		<p><%= link_to "New Song", new_song_path %></p><br/>
-		<p>What are others singing today?<p/><br/>
-		<p><%= link_to "All Songs", songs_path %></p>
-
-<% else %>
-		 <%= link_to "Login", new_session_path if !@is_login%>
-<% end %>
 
 
 

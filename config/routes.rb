@@ -2,8 +2,8 @@ Rails.application.routes.draw do
     resources :songs 
     resources :users
   
-    get '/new' => 'users#new', as: :newuser
-    get 'songs/:id' => 'song#show'
+    
+   
     # delete  '/songs/:id'=>  'song#destroy'
     resource :session, only: [:new, :create, :destroy]
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index', as: :home
+   root 'users#new', as: :home
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
