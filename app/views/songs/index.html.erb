@@ -5,8 +5,7 @@
 
 	<li><%= s.name %></li><br/>
 	<li><%= s.date %></li><br/>
-	<li><%= s.text %></li><br/>
-<%= link_to 'Delete', song_path(s.id), method: :delete %>	
+	<li><%= s.text %></li><br/>	
 <br/>
 	<% end %>
 </ul>
@@ -20,8 +19,7 @@
 
 	<li><%= s.name %></li><br/>
 	<li><%= s.date %></li><br/>
-	<li><%= s.text %></li><br/>
-	<%= link_to 'Delete', song_path(s.id), method: :delete %>	
+	<li><%= s.text %></li><br/>	
 <br/>
 	<li><% end %>
 </ul>
@@ -51,7 +49,6 @@
 	<li> <%=s.location %></li>
 	<li> <%=s.text %></li>
 <br/>
-<%= link_to 'Delete', song_path(s.id), method: :delete %>
 <% end %>
 </ul>
 

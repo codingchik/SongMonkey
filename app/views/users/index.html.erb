@@ -17,7 +17,8 @@
 <li><%= s.name %></li>
 <li><%= s.location %></li>
 <li><%= s.text %></li>
-
+<%= link_to 'Delete', method: :delete %>
+<%= link_to "Edit", edit_song_path(s.id) %>
 <% end %>
 
 </ul>

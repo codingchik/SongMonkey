@@ -24,9 +24,16 @@ class SongsController <ApplicationController
 	end
 
 	def edit
+		@song = Song.find(params[:id])
 	end
 
 	def update
+		@song = Song.find(params[:id])
+		if @song.update_attributes(params.require(:song).permit(:name, :date, :text, :location, :user_id))
+			redirect_to songs_path
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

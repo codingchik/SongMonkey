@@ -1,14 +1,11 @@
 
 <h1> New Song </h1>
 
-<%= form_for @song do |s| %>
-<p><%= s.text_field :name, placeholder:"title" %></p>
-<p><%= s.text_field :location, placeholder: "location" %></p>
-<p><%= s.date_field :date, placeholder: "date" %></p>
-<p><%= s.text_area :text, placeholder: "what's your song today?" %></p>
+<%= render "form" %>
 
-<p><%= s.submit %> </p>
-<% end %>
+
+<p><%= link_to "Back to all songs", songs_path %></p>
+
 
 
 	

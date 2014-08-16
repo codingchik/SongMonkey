@@ -6,5 +6,4 @@ class Song
   field :location, type: String
 
   belongs_to :user
-  # has_many : likes
 end
