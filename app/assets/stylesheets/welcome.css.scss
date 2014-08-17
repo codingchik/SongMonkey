@@ -3,18 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url(http://fonts.googleapis.com/css?family=Niconne);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
-$headerfont: 'Niconne', cursive;
+$mainfont: 'Niconne', cursive;
+$textfont: 'Lato', sans-serif;
 $maincolor: #E8D1C8;
 
 
-
-
-body {
-	padding: 100px;
-	margin: auto;
-	background: url(grey_wash_wall.png); 
+.navbar-nav {
+	margin: 0;
 }
+
+.navbar-toggle:hover {
+    background-color: #373737;
+}
+
+.navbar-nav li a {
+    color: #CCC;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-nav li a:hover {
+    background-color: #373737;
+}
+
+.top {
+    background-color: #474747;
+}
+
+.top .navbar-brand {
+	float: left;
+	padding: 7px 12px;
+}
+
+.top .container {
+    padding: 0;
+}
+
+
+#welcome {
+	position: center;
+}
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/assets/glyphicons-halflings-regular.eot');
+    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+
 
 .jumbotron {
 	padding-top: 250px;
@@ -24,17 +61,36 @@ body {
 	background-size: cover;
 }
 
-li {
+body {
+	margin: auto;
+	background: url(grey_wash_wall.png); 
+
+	h1 {
+	text-align: center;
+	font-family: $mainfont;
+	font-size: 55px;
+	text-color: $maincolor;
+	}
+
+	h2 {
+	text-align: center;
+	font-family: $mainfont;
+	font-size: 35px;
+	text-color: $maincolor;
+	}
+
+	.content p {
+	font-family: $textfont;
+	font-size: 30px;
+	}
+
+	li {
 	color: $maincolor;
 	display: block;
 	position: center;
+	font-family: $textfont;
+	}
 }
 
 
-h1 {
-	text-align: center;
-	font-family: $headerfont;
-	font-size: 55px;
-	text-color: $maincolor;
-}
 
