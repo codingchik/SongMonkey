@@ -1,10 +1,22 @@
 <%= form_for @song do |s| %>
-<p><%= s.text_field :name, placeholder:"Title" %></p>
-<p><%= s.text_field :location, placeholder: "Location" %></p>
-<p><%= s.date_field :date, placeholder: "Date" %></p>
-<p><%= s.text_area :text, placeholder: "What's your Song today?" %></p>
+<div class="form-group">
+<p><%= s.text_field :name, placeholder:"Title", class: 'form-control' %></p>
+</div>
 
-<p><%= s.submit %> </p>
+<div class="form-group">
+<p><%= s.text_field :location, placeholder: "Location", class: 'form-control' %></p>
+</div>
 
+<div class="form-group">
+<p><%= s.date_field :date, placeholder: "Date", class: 'form-control' %></p>
+</div>
+
+<div class="form-group">
+<p><%= s.text_area :text, placeholder: "What's your Song today?", class: 'form-control' %></p>
+</div>
+
+<div class="form-group">
+<p><%= s.submit "Submit", class: 'btn btn-primary btn-large' %> </p>
+</div>
 <% end %>
 

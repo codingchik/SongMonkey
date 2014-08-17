@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 	end
 	
 	def create
-		@user = User.new(params.require(:user).permit(:name, :email, :location, :password, :password_confirmation))
+		@user = User.new(params.require(:user).permit(:name, :email, :location, :password, :password_confirmation, :image))
 		if @user.save
 			session[:user_id] = @user.id.to_s
 			redirect_to users_path(@user)
@@ -21,7 +21,6 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		# @user.song = current_user.song
 	end
 
 	def edit

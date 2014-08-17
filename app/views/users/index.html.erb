@@ -1,6 +1,7 @@
 
+<%= image_tag current_user.image.url, size: "100" %>
 <% if current_user %>
-		 
+
 		<p>Whats your song today <%= current_user.name %> ?</p>
 		<p><%= link_to "New Song", new_song_path %></p><br/>
 		<p>What are others singing today?<p/>
