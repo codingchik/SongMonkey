@@ -1,35 +1,45 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//
 
-@import url(http://fonts.googleapis.com/css?family=Niconne);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic);
 
-$mainfont: 'Niconne', cursive;
-$textfont: 'Lato', sans-serif;
-$maincolor: #E8D1C8;
+$headerfont: 'Niconne', cursive;
+$textfont: 'Roboto Condensed', sans-serif;
+$headercolor: #9A9B9C;
+$bluegreycolor: #313542;
+$textcolor: #67686D;
+$bluecolor: #021440;
 
+/*Navigation */
 
-.navbar-nav {
+.navbar-collapse.collapse {
 	margin: 0;
+	background-color: $bluecolor;
+	height: 65px;
 }
+.navbar {
+		margin-bottom: 10px;
+	}
 
 .navbar-toggle:hover {
-    background-color: #373737;
+    background-color: $bluegreycolor;
 }
 
 .navbar-nav li a {
-    color: #CCC;
-    font-family: 'Lato', sans-serif;
+    color: $textcolor;
+    font-family: $textfont;
 }
 
 .navbar-nav li a:hover {
-    background-color: #373737;
+    background-color: $bluegreycolor;
 }
 
 .top {
-    background-color: #474747;
+    background-color: $bluecolor;
 }
 
 .top .navbar-brand {
@@ -39,26 +49,52 @@ $maincolor: #E8D1C8;
 
 .top .container {
     padding: 0;
+    background-color: #334B83;
 }
 
+/* welcome index */
 
-#welcome {
-	position: center;
+#title {
+	position: relative;
+	right: 235px;
+	color: whitesmoke;
+	-webkit-text-stroke: 1.25px black;
 }
+
+.white
+{
+	color:white;
+	font-weight:bold;
+	font-size:14px;
+	-webkit-text-stroke: 0.1px black;
+}
+
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url('/assets/glyphicons-halflings-regular.eot');
     src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
-
-
 .jumbotron {
-	padding-top: 250px;
-	padding-bottom: 200px;
+	text-align: left;
+	font-family: $headerfont;
+	font-size: 55px;
+	color: $headercolor;
+	margin-top: 46px;
+	padding-top: 48px;
+	padding-bottom: 48px;
 	background: url(mic.jpg) no-repeat center center;
-	margin: 50px;
-	background-size: cover;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	
+}
+
+#intro {
+ 	color: whitesmoke;
+ 	font-weight:bold;
+	-webkit-text-stroke: 0.5px black;
 }
 
 body {
@@ -67,29 +103,74 @@ body {
 
 	h1 {
 	text-align: center;
-	font-family: $mainfont;
+	font-family: $headerfont;
 	font-size: 55px;
-	text-color: $maincolor;
+	color: $bluegreycolor;
 	}
 
 	h2 {
 	text-align: center;
-	font-family: $mainfont;
+	font-family: $headerfont;
 	font-size: 35px;
-	text-color: $maincolor;
+	color: $bluegreycolor;
 	}
 
-	.content p {
+	 p {
 	font-family: $textfont;
-	font-size: 30px;
+	font-size: 20px;
+	color: $bluecolor;
+	margin: auto;
+	padding: 5px;
+	display: inline
 	}
 
 	li {
-	color: $maincolor;
+	color: $bluecolor;
 	display: block;
 	position: center;
 	font-family: $textfont;
 	}
+}
+
+.mainpage {
+	margin-top: 80px;
+}
+
+#leftcol {
+	background-color: $headercolor;
+	border: 2px #021440;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+img {
+	margin: auto;
+	display: block;
+}
+
+#rightcol {
+	background-color: $headercolor;
+	border: 2px #021440;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#rightcol a
+{
+	color:#021440;
+}
+.form-group {
+	display: inline;
+	border-radius: 10px;
+	padding: 10px;
+	position: center;
+}
+
+.allform {
+	padding-left: 350px;
+	padding-right: 350px;
 }
 
 

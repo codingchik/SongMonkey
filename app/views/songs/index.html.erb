@@ -1,49 +1,56 @@
-<div class="middle">
-        <div class="container">
-            <div class="col-md-9 content">
-            <h1> All Songs </h1>
-				<ul>
-					<% @songs.each do |s| %>
-					<p><li> <%=s.name %></li></p>
-					<p><li> <%=s.date %></li></p>
-					<p><li> <%=s.location %></li></p>
-					<p><li> <%=s.text %></li></p><br/>
-					<% end %>
-				</ul>	
-			<h2> Songs in Los Angeles </h2>
-				<ul>
-					<% @songs.where(:location => "Los Angeles").each do |s| %>
-					<p><li><%= s.name %></li></p>
-					<p><li><%= s.date %></li></p>
-					<p><li><%= s.text %></li></p><br/>	
-					<% end %>
-				</ul>
-				<br/>
-			<h2> Songs in Santa Monica </h2>
-				<ul>
-					<% @songs.where(:location => "Santa Monica").each do |s| %>
-					<p><li><%= s.name %></li><p/>
-					<p><li><%= s.date %></li><p/>
-					<p><li><%= s.text %></li><p/><br/>	
-					<% end %>
-				</ul>
-				<br/>
-			<h2> Songs in Pasadena </h2>
-				<ul>
-					<% @songs.where(:location => "Pasadena").each do |s| %>
-					<p><li><%= s.name %></li><p/>
-					<p><li><%= s.date %></li><p/>
-					<p><li><%= s.text %></li><p/><br/>
-					<% end %>
-				</ul>	
-				<br/>		
-            </div>
-            <div class="col-md-3">
-                <h2>Locations</h2>   
-                <%= link_to "new song", new_song_path %>
-            </div>
-        </div>
+
+<div class="mainpage">
+  <div class="container">
+    <div class="col-md-8 col-sm-0 content" id="leftcol">
+        <h1> What are others singing today? </h1>
+	    <ul>
+			<% @songs.each do |s| %>
+			<span class="white">Title:</span><li> <%=s.name %></li>
+			<span class="white">Date:</span><li> <%=s.date %></li>
+			<span class="white">Place:</span><li> <%=s.location %></li>
+			<li> <%=s.text %></li></p><br/>
+			<% end %>
+		</ul>			
+		<h2> Songs in Los Angeles </h2>
+		<ul>
+			<% @songs.where(:location => "Los Angeles").each do |s| %>
+			<p><li><%= s.name %></li></p>
+			<p><li><%= s.date %></li></p>
+			<p><li><%= s.text %></li></p><br/>	
+			<% end %>
+		</ul><br/>
+		<h2> Songs in Santa Monica </h2>
+		<ul>
+			<% @songs.where(:location => "Santa Monica").each do |s| %>
+			<p><li><%= s.name %></li><p/>
+			<p><li><%= s.date %></li><p/>
+			<p><li><%= s.text %></li><p/><br/>	
+			<% end %>
+		</ul><br/>
+		<h2> Songs in Pasadena </h2>
+		<ul>
+			<% @songs.where(:location => "Pasadena").each do |s| %>
+			<p><li><%= s.name %></li><p/>
+			<p><li><%= s.date %></li><p/>
+			<p><li><%= s.text %></li><p/><br/>
+			<% end %>
+		</ul><br/>		
+    </div>
+    <div class="col-md-1 col-sm-0 content"><br/>
+  	</div>	
+    <div class="col-md-3" id="rightcol">
+        <h2>Locations</h2>  
+		<ul>
+		<p><li><%= link_to "Show All", songs_path(songfilter:"Show All") %></li><p/>
+		<p><li><%= link_to "Songs in Los Angeles", songs_path(songfilter: "Los Angeles") %></li><p/>
+		<p><li><%= link_to "Songs in Pasadena", songs_path(songfilter: "Pasadena") %></li><p/>
+		<p><li><%= link_to "Songs in Santa Monica", songs_path(songfilter: "Santa Monica") %></li><p/>
+		<p><li><%= link_to "New Song", new_song_path %></li><p/>
+		</ul>
+    </div>
+    </div>
 </div>
+
 
 
 

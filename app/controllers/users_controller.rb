@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 	def index
-		@users = User.all
+		# @users = User.all
 	end
 	
 	def new
@@ -24,10 +24,16 @@ class UsersController < ApplicationController
 	end
 
 	def edit
+		@user = User.find(params[:id])
 	end
 
 	def update
-		
+		@user = User.find(params[:id])
+		if @user.update_attributes(params.require(:user).permit(:name, :email, :location, :password, :image))
+			redirect_to users_path(@user)
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

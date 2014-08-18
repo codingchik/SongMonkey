@@ -1,7 +1,19 @@
 class SongsController <ApplicationController
 
 	def index
-		@songs = Song.all
+		my_song_filter = params[:songfilter]
+		case my_song_filter
+		when "Show All"
+			@songs = Song.all
+		when "Los Angeles"
+			@songs = Song.where(:location => "Los Angeles")
+		when "Pasadena"
+			@songs = Song.where(:location => "Pasadena")
+		when "Santa Monica"
+			@songs = Song.where(:location => "Santa Monica")
+		else
+			@songs = Song.all
+		end
 	end		
 
 	def show
@@ -39,7 +51,7 @@ class SongsController <ApplicationController
 	def destroy
 		@song = Song.find(params[:id])
 		@song.destroy
-		redirect_to songs_path
+		redirect_to users_path
 	end
 
 end

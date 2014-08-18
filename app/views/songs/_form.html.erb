@@ -1,22 +1,26 @@
-<%= form_for @song do |s| %>
+
+<div class="allform">
+<%= form_for @song, html: {class: 'form'} do |s| %>
 <div class="form-group">
-<p><%= s.text_field :name, placeholder:"Title", class: 'form-control' %></p>
+<%= s.text_field :name, placeholder:"Title", class: 'form-control' %>
 </div>
 
 <div class="form-group">
-<p><%= s.text_field :location, placeholder: "Location", class: 'form-control' %></p>
+<%= s.text_field :location, placeholder: "Location", class: 'form-control' %>
 </div>
 
 <div class="form-group">
-<p><%= s.date_field :date, placeholder: "Date", class: 'form-control' %></p>
+<%= s.date_field :date, placeholder: "Date", class: 'form-control' %>
 </div>
 
 <div class="form-group">
-<p><%= s.text_area :text, placeholder: "What's your Song today?", class: 'form-control' %></p>
+<%= s.text_area :text, placeholder: "What's your Song Today?", class: 'form-control' %>
 </div>
-
-<div class="form-group">
-<p><%= s.submit "Submit", class: 'btn btn-primary btn-large' %> </p>
+<br/>
+<div class="button">
+<%= s.submit "Submit", class: 'btn btn-primary btn-large' %>
 </div>
 <% end %>
+</div>
+
 

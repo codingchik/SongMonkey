@@ -1,5 +1,5 @@
-<header class="top" role="header">
-<nav class="navbar-collapse collapse" role="navigation"> 
+
+<nav class="navbar-collapse collapse navbar-fixed-top" role="navigation"> 
   <div class="container-fluid">
   <div class="navbar-header">
     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -12,14 +12,11 @@
         <%= image_tag "musicnote.png", size: "40" %>
         </a>
   </div>
+
   <div class="collapse navbar-collapse"  role="navigation">
-    <ul class="navbar-nav nav">
-        <li> <%= link_to "Home", users_path %></li>
-    </ul>
- 
-  <div>
     <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
+        <li> <%= link_to "Home", users_path %></li>
         <li> <%= link_to "New Song", new_song_path %></li>
         <li><%= link_to 'Logout', session_path, method: :delete %></li>
         <% else %>
@@ -31,7 +28,7 @@
   </div> 
   </div>
 </nav>
-</header>
+
 
 
  
