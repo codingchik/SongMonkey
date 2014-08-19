@@ -33,25 +33,24 @@ class SongsController <ApplicationController
 		 else
 		 	redirect_to create_song_path
 		 end
-	end
+		end
 
-	def edit
-		@song = Song.find(params[:id])
-	end
+		def edit
+			@song = Song.find(params[:id])
+		end
 
-	def update
-		@song = Song.find(params[:id])
-		if @song.update_attributes(params.require(:song).permit(:name, :date, :text, :location, :user_id))
-			redirect_to songs_path
-		else
-			render 'edit'
+		def update
+			@song = Song.find(params[:id])
+			if @song.update_attributes(params.require(:song).permit(:name, :date, :text, :location, :user_id))
+				redirect_to songs_path
+			else
+				render 'edit'
+			end
+		end
+
+		def destroy
+			@song = Song.find(params[:id])
+			@song.destroy
+			redirect_to users_path
 		end
 	end
-
-	def destroy
-		@song = Song.find(params[:id])
-		@song.destroy
-		redirect_to users_path
-	end
-
-end

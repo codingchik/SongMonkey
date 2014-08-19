@@ -17,160 +17,160 @@ $bluecolor: #021440;
 /*Navigation */
 
 .navbar-collapse.collapse {
-	margin: 0;
-	background-color: $bluecolor;
-	height: 65px;
+margin: 0;
+background-color: $bluecolor;
+height: 65px;
 }
 .navbar {
-		margin-bottom: 10px;
-	}
+margin-bottom: 10px;
+}
 
 .navbar-toggle:hover {
-    background-color: $bluegreycolor;
+background-color: $bluegreycolor;
 }
 
 .navbar-nav li a {
-    color: $textcolor;
-    font-family: $textfont;
+color: $textcolor;
+font-family: $textfont;
 }
 
 .navbar-nav li a:hover {
-    background-color: $bluegreycolor;
+background-color: $bluegreycolor;
 }
 
 .top {
-    background-color: $bluecolor;
+background-color: $bluecolor;
 }
 
 .top .navbar-brand {
-	float: left;
-	padding: 7px 12px;
+float: left;
+padding: 7px 12px;
 }
 
 .top .container {
-    padding: 0;
-    background-color: #334B83;
+padding: 0;
+background-color: #334B83;
 }
 
 /* welcome index */
 
 #title {
-	position: relative;
-	right: 235px;
-	color: whitesmoke;
-	-webkit-text-stroke: 1.25px black;
+position: relative;
+right: 235px;
+color: whitesmoke;
+-webkit-text-stroke: 1.25px black;
 }
 
 .white
 {
-	color:white;
-	font-weight:bold;
-	font-size:14px;
-	-webkit-text-stroke: 0.1px black;
+color:white;
+font-weight:bold;
+font-size:14px;
+-webkit-text-stroke: 0.1px black;
 }
 
 @font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('/assets/glyphicons-halflings-regular.eot');
-    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+font-family: 'Glyphicons Halflings';
+src: url('/assets/glyphicons-halflings-regular.eot');
+src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
 .jumbotron {
-	text-align: left;
-	font-family: $headerfont;
-	font-size: 55px;
-	color: $headercolor;
-	margin-top: 46px;
-	padding-top: 48px;
-	padding-bottom: 48px;
-	background: url(mic.jpg) no-repeat center center;
-	-webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-	
+text-align: left;
+font-family: $headerfont;
+font-size: 55px;
+color: $headercolor;
+margin-top: 46px;
+padding-top: 48px;
+padding-bottom: 48px;
+background: url(mic.jpg) no-repeat center center;
+-webkit-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+background-size: 100% 100%;
+
 }
 
 #intro {
- 	color: whitesmoke;
- 	font-weight:bold;
-	-webkit-text-stroke: 0.5px black;
+color: whitesmoke;
+font-weight:bold;
+-webkit-text-stroke: 0.5px black;
 }
 
 body {
-	margin: auto;
-	background: url(grey_wash_wall.png); 
+margin: auto;
+background: url(grey_wash_wall.png); 
 
-	h1 {
-	text-align: center;
-	font-family: $headerfont;
-	font-size: 55px;
-	color: $bluegreycolor;
-	}
+h1 {
+text-align: center;
+font-family: $headerfont;
+font-size: 55px;
+color: $bluegreycolor;
+}
 
-	h2 {
-	text-align: center;
-	font-family: $headerfont;
-	font-size: 35px;
-	color: $bluegreycolor;
-	}
+h2 {
+text-align: center;
+font-family: $headerfont;
+font-size: 35px;
+color: $bluegreycolor;
+}
 
-	 p {
-	font-family: $textfont;
-	font-size: 20px;
-	color: $bluecolor;
-	margin: auto;
-	padding: 5px;
-	display: inline
-	}
+p {
+font-family: $textfont;
+font-size: 20px;
+color: $bluecolor;
+margin: auto;
+padding: 5px;
+display: inline
+}
 
-	li {
-	color: $bluecolor;
-	display: block;
-	position: center;
-	font-family: $textfont;
-	}
+li {
+color: $bluecolor;
+display: block;
+position: center;
+font-family: $textfont;
+}
 }
 
 .mainpage {
-	margin-top: 80px;
+margin-top: 80px;
 }
 
 #leftcol {
-	background-color: $headercolor;
-	border: 2px #021440;
-	border-style: solid;
-	border-radius: 5px;
-	padding: 10px;
+background-color: $headercolor;
+border: 2px #021440;
+border-style: solid;
+border-radius: 5px;
+padding: 10px;
 }
 
 img {
-	margin: auto;
-	display: block;
+margin: auto;
+display: block;
 }
 
 #rightcol {
-	background-color: $headercolor;
-	border: 2px #021440;
-	border-style: solid;
-	border-radius: 5px;
-	padding: 10px;
+background-color: $headercolor;
+border: 2px #021440;
+border-style: solid;
+border-radius: 5px;
+padding: 10px;
 }
 
 #rightcol a
 {
-	color:#021440;
+color:#021440;
 }
 .form-group {
-	display: inline;
-	border-radius: 10px;
-	padding: 10px;
-	position: center;
+display: inline;
+border-radius: 10px;
+padding: 10px;
+position: center;
 }
 
 .allform {
-	padding-left: 350px;
-	padding-right: 350px;
+padding-left: 350px;
+padding-right: 350px;
 }
 
 
