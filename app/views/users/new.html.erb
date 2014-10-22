@@ -1,6 +1,8 @@
+<body>
 <div class="mainpage">
+	<h1>Sign Up</h1>
 	<div class="allform">
-		<h1>Sign Up</h1>
+		
 		<%= form_for @user, html: { class: 'form' } do |f| %>
 
 		<div class="form-group">
@@ -9,6 +11,10 @@
 
 		<div class="form-group">
 			<%= f.text_field :email, placeholder: "Email", class: 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			<%= f.text_field :location, placeholder: "Location", class: 'form-control' %>
 		</div>
 
 		<div class="form-group">
@@ -23,14 +29,11 @@
 		<div class="form-group">
 			<%= f.file_field :image, placeholder: "Upload a Picture", class: 'form-control' %> 
 		</div>
+		
 		<div class="button">
-			<%= f.submit "Upload", class: 'btn btn-primary btn-large' %>
+			<%= f.submit "Submit", class: 'btn btn-lg btn-default' %>
 		</div>
-		<br/>
-		<div class="button">
-			<%= f.submit "Submit", class: 'btn btn-primary btn-large' %>
-		</div>
-
 		<% end %>
 	</div>
 </div>
+</body>

@@ -1,7 +1,10 @@
 <div class="mainpage">
 	<h1> New Song </h1>
 	<%= render "form" %>
-	<p><%= link_to "Back to All Songs", songs_path %></p>
+
+  <div class="button">
+    <%= link_to "All Songs", songs_path, class: 'btn btn-primary btn-large' %>
+  </div>
 </div>
 
 

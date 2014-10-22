@@ -4,14 +4,14 @@
  	<meta charset="utf-8">
  	<!-- Set the viewport so this responsive site displays correctly on mobile devices -->
  	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<title>MusicApp</title>
+ 	<title>SongMonkey</title>
  	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
  	<%= csrf_meta_tags %>
  </head>
- <body>
- 	<%= render partial: 'layouts/nav'%>
 
+ <body>
+<%= render partial: 'layouts/nav'%>
  	<%= yield %>
  </body>
  </html>

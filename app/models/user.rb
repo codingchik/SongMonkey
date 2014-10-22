@@ -1,4 +1,3 @@
-
 class User
   include Mongoid::Document
   include ActiveModel::SecurePassword

@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 		@user = User.new
 		@is_login = true
 		if current_user
-			redirect_to users_path(@user)
+			redirect_to users_show_path(@user)
 		end
 	end
 

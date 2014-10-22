@@ -14,15 +14,80 @@
  *= require bootstrap
  */
 
-@import 'bootstrap';
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+@import url(http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css);
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic);
 
+$headerfont: 'Niconne', cursive;
+$textfont: 'Roboto Condensed', sans-serif;
+$headercolor: #9A9B9C;
+$bluegreycolor: #313542;
+$textcolor: #67686D;
+$bluecolor: #021440;
+$linkcolor: #D98E04;
 
-@font-face {
-font-family: 'Glyphicons Halflings';
-src: url('../assets/glyphicons-halflings-regular.eot');
-src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-url('../assets/glyphicons-halflings-regular.woff') format('woff'),
-url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
-url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+/*Navigation */
+
+.navbar-collapse.collapse {
+margin: 0;
+background-color: $bluecolor;
+height: 65px;
+}
+.navbar {
+margin-bottom: 10px;
+}
+
+.navbar-toggle:hover {
+background-color: $bluegreycolor;
+}
+
+.navbar-nav li a {
+color: $textcolor;
+font-family: $textfont;
+}
+
+.navbar-nav li a:hover {
+background-color: $bluegreycolor;
+}
+
+.top {
+background-color: $bluecolor;
+}
+
+.top .navbar-brand {
+float: left;
+padding: 7px 12px;
+font-size: 15px;
+height: 55px;
+}
+
+.top .container {
+padding: 0;
+background-color: #334B83;
+}
+
+/* main content */
+
+.mainpage h1 {
+text-align: center;
+font-family: $headerfont;
+font-family: 'Niconne', cursive;
+font-size: 45px;
+color: $bluegreycolor;
+}
+
+.mainpage {
+margin-top: 80px;
+}
+
+.link a {
+  color: #D98E04;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  
+}
+#rightcol {
+  font-size: 20px;
+  text-align: center;
 }
