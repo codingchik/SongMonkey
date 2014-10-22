@@ -1,54 +1,78 @@
-<div class="mainpage">
-	<div class="container">
-		<div class="col-md-8 col-sm-0 content" id="leftcol">
-			<h1> What are others singing today? </h1>
-			<ul>
-				<% @songs.each do |s| %>
-				<span class="white">Title:</span><li> <%=s.name %></li>
-				<span class="white">Date:</span><li> <%=s.date %></li>
-				<span class="white">Place:</span><li> <%=s.location %></li>
-				<li> <%=s.text %></li></p><br/>
-				<% end %>
-			</ul>			
-			<h2> Songs in Los Angeles </h2>
-			<ul>
-				<% @songs.where(:location => "Los Angeles").each do |s| %>
-				<p><li><%= s.name %></li></p>
-				<p><li><%= s.date %></li></p>
-				<p><li><%= s.text %></li></p><br/>	
-				<% end %>
-			</ul><br/>
-			<h2> Songs in Santa Monica </h2>
-			<ul>
-				<% @songs.where(:location => "Santa Monica").each do |s| %>
-				<p><li><%= s.name %></li><p/>
-					<p><li><%= s.date %></li><p/>
-						<p><li><%= s.text %></li><p/><br/>	
-							<% end %>
-						</ul><br/>
-						<h2> Songs in Pasadena </h2>
-						<ul>
-							<% @songs.where(:location => "Pasadena").each do |s| %>
-							<p><li><%= s.name %></li><p/>
-								<p><li><%= s.date %></li><p/>
-									<p><li><%= s.text %></li><p/><br/>
-										<% end %>
-									</ul><br/>		
-								</div>
-								<div class="col-md-1 col-sm-0 content"><br/>
-								</div>	
-								<div class="col-md-3" id="rightcol">
+<div class="container">
+	<div class="mainpage">
+		<div class="row">
+								<div class="col-md-12 col-xs-12" id="topbar">
 									<h2>Locations</h2>  
 									<ul>
-										<p><li><%= link_to "Show All", songs_path(songfilter:"Show All") %></li><p/>
-											<p><li><%= link_to "Songs in Los Angeles", songs_path(songfilter: "Los Angeles") %></li><p/>
-												<p><li><%= link_to "Songs in Pasadena", songs_path(songfilter: "Pasadena") %></li><p/>
-													<p><li><%= link_to "Songs in Santa Monica", songs_path(songfilter: "Santa Monica") %></li><p/>
-														<p><li><%= link_to "New Song", new_song_path %></li><p/>
-														</ul>
-													</div>
-												</div>
-											</div>
+										<span class="titles"><li><%= link_to "Show All", songs_path(songfilter:"Show All") %></li></span>
+										<span class="titles"><li><%= link_to "Songs in Los Angeles", songs_path(songfilter: "Los Angeles") %></li></span>
+										<span class="titles"><li><%= link_to "Songs in Pasadena", songs_path(songfilter: "Pasadena") %></li></span>
+										<span class="titles"><li><%= link_to "Songs in Santa Monica", songs_path(songfilter: "Santa Monica") %></li></span>
+										<span class="titles"><li><%= link_to "New Song", new_song_path %></li></span>
+									</ul>
+								</div>
+								</div>
+		<div class="row">
+			<div class="col-md-2 col-xs-0">
+			</div>
+		<div class="col-md-8 col-xs-12 content" id="leftcol">
+			<h1> What are others singing today? </h1>
+			<ul class="allsongs">
+				<% @songs.each do |s| %>
+				<li> <span class="titles">Title</span>&nbsp;&nbsp;<%=s.name %></li>
+				<li><span class="titles">Date</span>&nbsp;&nbsp;<%=s.date %></li>
+				<li><span class="titles">Place</span>&nbsp;&nbsp;<%=s.location %></li>
+				<li><span class="titles">Song</span>&nbsp;&nbsp;<%=s.text %></li>
+				<hr><br/><br/>
+				<% end %>
+			</ul>	
+			
+			</div>
+			<div class="col-md-2 col-xs-0">
+			</div>
+			</div>	
+			<div class="row">	
+			<div class="col-md-4 col-xs-12" id="leftcol">
+			<h2> Songs in Los Angeles </h2>
+			<ul class="allsongs">
+				<% @songs.where(:location => "Los Angeles").each do |s| %>
+				<li> <span class="titles">Title</span>&nbsp;&nbsp;<%=s.name %></li>
+				<li><span class="titles">Date</span>&nbsp;&nbsp;<%=s.date %></li>
+				<li><span class="titles">Place</span>&nbsp;&nbsp;<%=s.location %></li>
+				<li><span class="titles">Song</span>&nbsp;&nbsp;<%=s.text %></li>
+				<hr><br/><br/>
+				<% end %>
+			</ul>
+		</div>
+		<div class="col-md-4 col-xs-12" id="leftcol">
+			<h2> Songs in Santa Monica </h2>
+			<ul class="allsongs">
+				<% @songs.where(:location => "Santa Monica").each do |s| %>
+				<li> <span class="titles">Title</span>&nbsp;&nbsp;<%=s.name %></li>
+				<li><span class="titles">Date</span>&nbsp;&nbsp;<%=s.date %></li>
+				<li><span class="titles">Place</span>&nbsp;&nbsp;<%=s.location %></li>
+				<li><span class="titles">Song</span>&nbsp;&nbsp;<%=s.text %></li>
+				<hr><br/><br/>
+				<% end %>
+			</ul>
+			
+		</div>
+		<div class="col-md-4 col-xs-12" id="leftcol">
+						<h2> Songs in Pasadena </h2>
+						<ul class="allsongs">
+							<% @songs.where(:location => "Pasadena").each do |s| %>
+							<li> <span class="titles">Title</span>&nbsp;&nbsp;<%=s.name %></li>
+				<li><span class="titles">Date</span>&nbsp;&nbsp;<%=s.date %></li>
+				<li><span class="titles">Place</span>&nbsp;&nbsp;<%=s.location %></li>
+				<li><span class="titles">Song</span>&nbsp;&nbsp;<%=s.text %></li>
+					<hr id="line"><br/><br/>		
+							<% end %>
+						</ul>
+				
+		</div>
+		</div>
+	</div>
+</div>
 
 
 

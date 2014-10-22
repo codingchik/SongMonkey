@@ -1,4 +1,7 @@
-
+<div class="container">
+<div class="col-md-4" "col-xs-3">
+</div>
+<div class="col-md-4" "col-xs-3">
 <div class="allform">
 	<%= form_for @song, html: {class: 'form'} do |s| %>
 	<div class="form-group">
@@ -12,15 +15,16 @@
 	<div class="form-group">
 		<%= s.date_field :date, placeholder: "Date", class: 'form-control' %>
 	</div>
-
 	<div class="form-group">
-		<div id="textarea"><%= s.text_area :text, placeholder: "What's your Song Today?", class: 'form-control'%></div>
+		<%= s.text_area :text, placeholder: "What's your Song Today?", class: 'form-control', rows: "8" %>
 	</div>
 	<br/>
 	<div class="button">
-		<%= s.submit "Submit", class: 'btn btn-primary btn-large' %>
+		<%= s.submit "Submit", class: 'btn btn-lg btn-default' %>
 	</div>
 	<% end %>
+</div>
+</div>
 </div>
 
 
